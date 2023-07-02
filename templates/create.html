@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<div class="container">
-    <form action="" method="post">
+<div class="create-heading">Add Employee Details</div>
+<div class="container create">
+    <form action="" method="post" class="form-group create-form">
         {% csrf_token %}
-        <input placeholder="Enter Name" type="text">
-        <input placeholder="Enter Email" type="email">
-        <input placeholder="Enter Address" type="text">
-        <input placeholder="Enter Phone Number" type="tel">
-        <button type="submit" class="btn btn-light">Save</button>
+        <input placeholder="Enter Name" type="text" class="form-element">
+        <br>
+        <input placeholder="Enter Email" type="email" class="form-element">
+        <br>
+        <input placeholder="Enter Address" type="text" class="form-element">
+        <br>
+        <input placeholder="Enter Phone Number" type="tel" class="form-element">
+        <br>
+        <button type="submit" class="btn btn-light" class="form-element">Save</button>
     </form>
 </div>
 {% endblock %}

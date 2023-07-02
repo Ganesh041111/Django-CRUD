@@ -50,4 +50,23 @@ td{
     background-color: rgb(236, 236, 236);
 }
 
+.create-heading{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 67, 125);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
+.create-form{
+    
+    justify-content: center;
+}
+
+.form-element{
+    display: inline-block;
+    background-color: aqua;
+}
