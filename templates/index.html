@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container title">
+    CRUD Operations
+</div>
+
+<div class="container table-title">
+    <div class="table-name">
+        Manage <b>Employees</b>
+    </div>
+    <div class="options">
+        <button class="btn btn-light">
+            <a href="/create"><b>Add New Employee</b></a>
+        </button>
+    </div>
+</div>
+
+<table class="container">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>Ganesh Shingre</td>
+        <td>ganesh.shingre04@gmail.com</td>
+        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
+        <td>9324147616</td>
+        <td>
+            <button class="btn btn-warning sm">
+                <a href="/edit">Edit</a>
+            </button>
+            <button class="btn btn-danger sm">
+                Delete
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ganesh Shingre</td>
+        <td>ganesh.shingre04@gmail.com</td>
+        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
+        <td>9324147616</td>
+        <td>
+            <button class="btn btn-warning sm">
+                <a href="/edit">Edit</a>
+            </button>
+            <button class="btn btn-danger sm">
+                Delete
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ganesh Shingre</td>
+        <td>ganesh.shingre04@gmail.com</td>
+        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
+        <td>9324147616</td>
+        <td>
+            <button class="btn btn-warning sm">
+                <a href="/edit">Edit</a>
+            </button>
+            <button class="btn btn-danger sm">
+                Delete
+            </button>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}
