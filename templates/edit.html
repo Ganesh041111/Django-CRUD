@@ -3,18 +3,20 @@
 {% block content%}
 <div class="create-heading">Update Employee Details</div>
 <div class="container create">
-    <form action="" method="post" class="form-group create-form">
+    <form method="post" class="form-group create-form">
         {% csrf_token %}
-        <input placeholder="Enter Name" type="text" class="form-element">
+        {% for i in emp %}
+        <input placeholder="Enter Name" type="text" class="form-element" value="{{i.name}}">
         <br>
-        <input placeholder="Enter Email" type="email" class="form-element">
+        <input placeholder="Enter Email" type="email" class="form-element" value="{{i.email}}">
         <br>
-        <input placeholder="Enter Address" type="text" class="form-element">
+        <input placeholder="Enter Address" type="text" class="form-element" value="{{i.address}}">
         <br>
-        <input placeholder="Enter Phone Number" type="tel" class="form-element">
+        <input placeholder="Enter Phone Number" type="tel" class="form-element" value="{{i.phone}}">
         <br>
-        <button type="submit" class="btn btn-success" style="margin-top: 3rem; border: 2px solid green;">Save Changes</button>
-        <button type="submit" class="btn btn-light" style="margin-top: 3rem; border: 2px solid black;"><a href="/">Back</a></button>
+        <button type="submit" class="btn btn-success" style="margin-top: 3rem; border: 2px solid green;"><a href="/save/{{i.id}}">Save Changes</a></button>
+        <button class="btn btn-light" style="margin-top: 3rem; border: 2px solid black;"><a href="/">Back</a></button>
+        {% endfor %}
     </form>
 </div>
 {% endblock %}

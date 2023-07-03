@@ -26,5 +26,33 @@ def create(request):
         return redirect('/')       
     return render(request,'create.html')
 
-def edit(request):
-    return render(request,'edit.html')
+def edit(request,name):
+    name=name
+    emp=employees.objects.filter(name=name).values()
+    print(emp)
+    context={
+        'emp':emp
+    }
+    return render(request,'edit.html',context)
+
+def save(request,id):
+    id=id
+    print(request)
+    if request.method=='GET':
+        name=request.GET.get('name')
+        email=request.GET.get('email')
+        address=request.GET.get('address')
+        phone=request.GET.get('phone')
+        print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOooo")
+        emp=employees(
+            id=id,
+            name=name,
+            email=email,
+            address=address,
+            phone=phone
+        )
+        emp.save()   
+        return redirect('/')    
+    print("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOooo")
+    return redirect('/')    
+
