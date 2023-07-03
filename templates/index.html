@@ -12,7 +12,7 @@
     </div>
     <div class="options">
         <button class="btn btn-light">
-            <a href="/create"><b>Add New Employee</b></a>
+            <a href="/create"><b style="text-decoration: none; color: black;">Add New Employee</b></a>
         </button>
     </div>
 </div>
@@ -25,11 +25,12 @@
         <th>Phone</th>
         <th>Actions</th>
     </tr>
+    {% for i in emp %}
     <tr>
-        <td>Ganesh Shingre</td>
-        <td>ganesh.shingre04@gmail.com</td>
-        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
-        <td>9324147616</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.phone}}</td>
         <td>
             <button class="btn btn-warning sm">
                 <a href="/edit">Edit</a>
@@ -39,36 +40,9 @@
             </button>
         </td>
     </tr>
+    {% endfor %}
 
-    <tr>
-        <td>Ganesh Shingre</td>
-        <td>ganesh.shingre04@gmail.com</td>
-        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
-        <td>9324147616</td>
-        <td>
-            <button class="btn btn-warning sm">
-                <a href="/edit">Edit</a>
-            </button>
-            <button class="btn btn-danger sm">
-                Delete
-            </button>
-        </td>
-    </tr>
 
-    <tr>
-        <td>Ganesh Shingre</td>
-        <td>ganesh.shingre04@gmail.com</td>
-        <td>2/6 Jai Ambika Niwas, Umesh Nagar, Dombivli(w)</td>
-        <td>9324147616</td>
-        <td>
-            <button class="btn btn-warning sm">
-                <a href="/edit">Edit</a>
-            </button>
-            <button class="btn btn-danger sm">
-                Delete
-            </button>
-        </td>
-    </tr>
 </table>
 
 {% endblock %}

@@ -5,15 +5,16 @@
 <div class="container create">
     <form action="" method="post" class="form-group create-form">
         {% csrf_token %}
-        <input placeholder="Enter Name" type="text" class="form-element">
+        <input placeholder="Enter Name" name="name" type="text" class="form-element">
         <br>
-        <input placeholder="Enter Email" type="email" class="form-element">
+        <input placeholder="Enter Email" name="email" type="email" class="form-element">
         <br>
-        <input placeholder="Enter Address" type="text" class="form-element">
+        <input placeholder="Enter Address" name="address" type="text" class="form-element">
         <br>
-        <input placeholder="Enter Phone Number" type="tel" class="form-element">
+        <input placeholder="Enter Phone Number" name="phone" type="tel" class="form-element">
         <br>
-        <button type="submit" class="btn btn-light" class="form-element">Save</button>
+        <button type="submit" class="btn btn-success" style="margin-top: 3rem; border: 2px solid green;">Save</button>
+        <button type="submit" class="btn btn-light" style="margin-top: 3rem; border: 2px solid black;"><a href="/">Back</a></button>
     </form>
 </div>
 {% endblock %}
